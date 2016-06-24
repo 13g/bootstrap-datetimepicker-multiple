@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="row">
+    <div class="form-group">
+        <div class="col-md-offset-1 col-lg-3">
+            <input required name="date" type="text" value="2016-06-24,2016-06-30"
+                   class="datetimepicker form-control" placeholder="请选择招聘时间" readonly/>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-datetimepicker-multiple.min.js"></script>
+<script src="../js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    var today = new Date();
+    $('.datetimepicker').datetimepicker({
+        language: 'zh-CN',
+        autoclose: false,
+        showMeridian: 'true',
+        format: "yyyy-mm-dd",
+        startDate: today,
+        endDate: new Date(today.getTime()+30*24*3600*1000),
+        minView:2,
+        multiple:true,
+        datesDisabled:[
+            new Date(today.getTime()+2*24*3600*1000),
+            new Date(today.getTime()+3*24*3600*1000)
+        ]
+    });
+</script>
+</html>

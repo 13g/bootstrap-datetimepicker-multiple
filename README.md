@@ -1,8 +1,8 @@
 # bootstrap-datetimepicker-multiple
-add the function of dates-multiple-selection based on bootstrap-datetimepicker  
+bootstrap-datetimepicker with support for date multiple.  
 在bootstrap-datetimepicker的基础上增加日期多选功能
 
-##USE
+##USAGE
 You can use this function with set the option multiple to true.  
 使用本功能只需将multiple选项设为true
 
